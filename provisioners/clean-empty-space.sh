@@ -10,5 +10,5 @@ yum clean all
 rm -rf /var/cache/* /usr/share/doc/*
 
 # Clean up unused disk space so compressed image is smaller.
-cat /dev/zero > /tmp/zero.fill
-rm /tmp/zero.fill
+dd if=/dev/zero of=/zero.fill bs=4M
+rm /zero.fill
