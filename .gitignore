@@ -2,3 +2,4 @@
 /packer_cache
 /builds
 .project
+/output-virtualbox-iso

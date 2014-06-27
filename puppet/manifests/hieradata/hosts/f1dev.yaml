@@ -1,0 +1,6 @@
+---
+classes: 
+  - forumone::nodejs
+  - forumone::ruby
+  - memcached
+  - forumone::mailcatcher

@@ -1,0 +1,13 @@
+---
+:backends:
+  - yaml
+  
+:yaml:
+  :datadir: /tmp/hieradata
+  
+:json:
+  :datadir: /tmp/hieradata
+  
+:hierarchy:
+  - hosts/%{::host}
+  - common
