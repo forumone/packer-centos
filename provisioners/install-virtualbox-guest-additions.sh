@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Virtualbox prereqs
+yum install -y kernel-devel kernel-headers dkms make bzip2 gcc
+
 # Mount the disk image
 cd /tmp
 mkdir /tmp/isomount
