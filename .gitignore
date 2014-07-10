@@ -1,5 +1,6 @@
 .DS_Store
 /packer_cache
 /builds
+/iso
 .project
 /output-virtualbox-iso
