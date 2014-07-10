@@ -2,18 +2,23 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
       "script": "provisioners/install-virtualbox-guest-additions.sh"
     },
     {
       "type": "shell",
-      "execute_command": "{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
       "script": "provisioners/upgrade-ruby.sh"
     },
     {
       "type": "file",
       "source": "./puppet/manifests/hieradata",
       "destination": "/tmp"
+    },
+    {
+      "type": "shell",
+      "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
+      "script": "provisioners/install-puppet.sh"
     },
     {
       "type": "puppet-masterless",
@@ -24,7 +29,7 @@
     },
     {
       "type": "shell",
-      "execute_command": "{{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
       "script": "provisioners/clean-empty-space.sh"
     }
   ],
@@ -50,7 +55,7 @@
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "shutdown_command": "sudo -S /sbin/halt -h -p",
+      "shutdown_command": "sudo /sbin/halt -h -p",
       "guest_additions_path": "/tmp/VBoxGuestAdditions.iso",
       "virtualbox_version_file": ".vbox_version",
       "vm_name": "f1-centos-6.5-x86_64",
