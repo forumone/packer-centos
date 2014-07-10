@@ -16,6 +16,13 @@
       "destination": "/tmp"
     },
     {
+      "type": "puppet-masterless",
+      "manifest_file": "puppet/manifests/init.pp",
+      "hiera_config_path": "puppet/manifests/hiera.yaml",
+      "manifest_dir": "puppet/manifests",
+      "module_paths": [ "puppet/modules" ]
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "script": "provisioners/clean-empty-space.sh"
@@ -51,13 +58,13 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "512"
+          "1024"
         ],
         [
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "1"
+          "4"
         ]
       ]
     }

@@ -1,0 +1,4 @@
+---
+forumone::ruby::version: '1.9.3-p484'
+forumone::ruby::user: 'root'
+forumone::ruby::home: '/usr/local/rbenv'

@@ -14,3 +14,4 @@ source /etc/profile.d/ruby.sh; rbenv global 2.0.0-p481
 echo 'rbenv rehash'
 source /etc/profile.d/ruby.sh; rbenv rehash
 source /etc/profile.d/ruby.sh; gem install librarian-puppet --no-ri --no-rdoc
+source /etc/profile.d/ruby.sh; gem install puppet --no-ri --no-rdoc

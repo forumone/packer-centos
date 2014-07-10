@@ -9,5 +9,6 @@
   :datadir: /tmp/hieradata
   
 :hierarchy:
+  - packer
   - hosts/%{::host}
   - common
