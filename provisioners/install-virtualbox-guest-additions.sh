@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Virtualbox prereqs
-yum install -y kernel-devel kernel-headers dkms make bzip2 gcc
+yum install -y kernel-devel kernel-headers dkms make bzip2 gcc perl
 
 # Mount the disk image
 cd /tmp
